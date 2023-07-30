@@ -1,0 +1,24 @@
+.service-content {
+     background-color: #339966;
+}
+
+.service-btn {
+     background-color: royalblue;
+     color: black;
+     border: none;
+}
+
+.service-btn:hover {
+     background-color: coral;
+     color: white;
+}
+
+.all-service-btn {
+     background-color: #336699;
+     color: black;
+
+}
+
+.all-service-btn:hover {
+     color: white
+}
