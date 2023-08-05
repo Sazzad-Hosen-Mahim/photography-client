@@ -1,6 +1,7 @@
 import React from "react";
 import "./NavigationBar.css";
 import { Link } from "react-router-dom";
+import { FaCameraRetro } from "react-icons/fa";
 
 const NavigationBar = () => {
   return (
@@ -47,7 +48,18 @@ const NavigationBar = () => {
               </li>
             </ul>
           </div>
-          <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+
+          <Link>
+            <div className="d-flex ">
+              <div className="text-4xl inline-block align-middle mt-3 ms-4">
+                <FaCameraRetro className="text-emerald-400"></FaCameraRetro>
+              </div>
+
+              <a className="btn btn-ghost normal-case text-xl text-left text-purple-400 mb-2">
+                Luxury<br></br>Photography
+              </a>
+            </div>
+          </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 text-lg nav-button">
@@ -65,8 +77,17 @@ const NavigationBar = () => {
             </li>
           </ul>
         </div>
-        <div className="navbar-end">
-          <a className="btn">Button</a>
+        <div className="navbar-end ">
+          <Link to="/login">
+            <a className="btn bg-indigo-400 text-black hover:text-white me-4">
+              Login
+            </a>
+          </Link>
+          <Link to="/signup">
+            <a className="btn bg-emerald-400 text-black hover:text-white me-4">
+              Sign Up
+            </a>
+          </Link>
         </div>
       </div>
     </div>
