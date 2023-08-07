@@ -1,5 +1,6 @@
 import React from "react";
 import "./Head.css";
+import { Link } from "react-router-dom";
 // Import Swiper React components
 
 const Head = () => {
@@ -15,9 +16,11 @@ const Head = () => {
           quibusdam ducimus ad quo fugit iusto illum fugiat deserunt laudantium
           nihil!
         </p>
-        <button className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg explore-btn">
-          Login To Explore
-        </button>
+        <Link to="/login">
+          <button className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg explore-btn">
+            Login To Explore
+          </button>
+        </Link>
       </div>
     </div>
   );

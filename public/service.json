@@ -1,0 +1,30 @@
+[
+  {
+    "service_id": "01",
+    "title": "Wedding Photography",
+    "img": "https://i.ibb.co/GFsbQH3/3.jpg",
+    "price": "15,000",
+    "description": "Wedding photography indoor and outdoor shot. Unlimited photo click. 2 albums included with a digital album. 500+ photos will be edited. All the raw photos will be given to the client. Cinematography included. Several drone shot from different angle."
+  },
+  {
+    "service_id": "02",
+    "title": "Birthday photography",
+    "img": "https://i.ibb.co/sWswv6r/2.jpg",
+    "price": "10,000",
+    "description": "Wedding photography indoor and outdoor shot. Unlimited photo click. 2 albums included with a digital album. 500+ photos will be edited. All the raw photos will be given to the client. Cinematography included. Several drone shot from different angle."
+  },
+  {
+    "service_id": "03",
+    "title": "Indoor and Outdoor shot",
+    "img": "https://i.ibb.co/TmjDbWC/5.jpg",
+    "price": "8,000",
+    "description": "Wedding photography indoor and outdoor shot. Unlimited photo click. 2 albums included with a digital album. 500+ photos will be edited. All the raw photos will be given to the client. Cinematography included. Several drone shot from different angle."
+  },
+  {
+    "service_id": "04",
+    "title": "Ceremony shot",
+    "img": "https://i.ibb.co/rQhP0cv/8.jpg",
+    "price": "12,000",
+    "description": "Wedding photography indoor and outdoor shot. Unlimited photo click. 2 albums included with a digital album. 500+ photos will be edited. All the raw photos will be given to the client. Cinematography included. Several drone shot from different angle."
+  }
+]
