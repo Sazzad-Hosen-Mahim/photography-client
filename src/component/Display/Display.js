@@ -26,14 +26,14 @@ import img9 from "../../assets/images/display/10.jpg";
 
 const Display = () => {
   return (
-    <div className="mt-12">
+    <div className="mt-32">
       <h1 className="mb-10 text-5xl text-red-400 text-center">
         Just a glance of our work!
       </h1>
       <>
         <Swiper
           autoplay={{
-            delay: 2500,
+            delay: 2000,
             disableOnInteraction: false,
           }}
           effect={"coverflow"}

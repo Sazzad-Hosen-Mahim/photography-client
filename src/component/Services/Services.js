@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Services.css";
-import { AiOutlineArrowRight } from "react-icons/ai";
+import ServiceCard from "../ServiceCard/ServiceCard";
 
 const Services = () => {
+  const [services, setServices] = useState([]);
+  useEffect(() => {
+    fetch("service.json")
+      .then((res) => res.json())
+      .then((data) => setServices(data));
+  }, []);
   return (
     <div className="">
       <section class="text-gray-600 body-font">
@@ -21,91 +27,15 @@ const Services = () => {
               food truck ugh squid celiac humblebrag.
             </p>
           </div>
-          <div class="flex flex-wrap -m-4">
-            <div class="xl:w-1/4 md:w-1/2 p-4">
-              <div class=" p-6 rounded-lg service-content">
-                <img
-                  class="h-40 rounded w-full object-cover object-center mb-6"
-                  src="https://dummyimage.com/720x400"
-                  alt="content"
-                />
-
-                <h2 class="text-lg text-gray-900 font-medium title-font mb-4">
-                  Chichen Itza
-                </h2>
-                <p class="text-white leading-relaxed text-base">
-                  Fingerstache flexitarian street art 8-bit waistcoat.
-                  Distillery hexagon disrupt edison bulbche.
-                </p>
-                <button className="btn mt-5 service-btn">
-                  Details <AiOutlineArrowRight></AiOutlineArrowRight>
-                </button>
-              </div>
-            </div>
-            <div class="xl:w-1/4 md:w-1/2 p-4">
-              <div class="service-content p-6 rounded-lg">
-                <img
-                  class="h-40 rounded w-full object-cover object-center mb-6"
-                  src="https://dummyimage.com/721x401"
-                  alt="content"
-                />
-
-                <h2 class="text-lg text-gray-900 font-medium title-font mb-4">
-                  Colosseum Roma
-                </h2>
-                <p class="text-white leading-relaxed text-base">
-                  Fingerstache flexitarian street art 8-bit waistcoat.
-                  Distillery hexagon disrupt edison bulbche.
-                </p>
-                <button className="btn mt-5 service-btn">
-                  Details <AiOutlineArrowRight></AiOutlineArrowRight>
-                </button>
-              </div>
-            </div>
-            <div class="xl:w-1/4 md:w-1/2 p-4">
-              <div class="service-content p-6 rounded-lg">
-                <img
-                  class="h-40 rounded w-full object-cover object-center mb-6"
-                  src="https://dummyimage.com/722x402"
-                  alt="content"
-                />
-
-                <h2 class="text-lg text-gray-900 font-medium title-font mb-4">
-                  Great Pyramid of Giza
-                </h2>
-                <p class="text-white leading-relaxed text-base">
-                  Fingerstache flexitarian street art 8-bit waistcoat.
-                  Distillery hexagon disrupt edison bulbche.
-                </p>
-                <button className="btn mt-5 service-btn">
-                  Details <AiOutlineArrowRight></AiOutlineArrowRight>
-                </button>
-              </div>
-            </div>
-            <div class="xl:w-1/4 md:w-1/2 p-4">
-              <div class="service-content p-6 rounded-lg">
-                <img
-                  class="h-40 rounded w-full object-cover object-center mb-6"
-                  src="https://dummyimage.com/723x403"
-                  alt="content"
-                />
-
-                <h2 class="text-lg text-gray-900 font-medium title-font mb-4">
-                  San Francisco
-                </h2>
-                <p class="text-white leading-relaxed text-base">
-                  Fingerstache flexitarian street art 8-bit waistcoat.
-                  Distillery hexagon disrupt edison bulbche.
-                </p>
-                <button className="btn mt-5 service-btn">
-                  Details <AiOutlineArrowRight></AiOutlineArrowRight>
-                </button>
-              </div>
-            </div>
+          <h1 className="text-white">Service length: {services.length}</h1>
+          <div class="grid gap-2 lg:grid-cols-2 md:grid-cols-1 ">
+            {services.map((service) => (
+              <ServiceCard
+                key={service.service_id}
+                service={service}
+              ></ServiceCard>
+            ))}
           </div>
-          <button className="btn all-service-btn flex mt-10 mx-auto ">
-            See all Services
-          </button>
         </div>
       </section>
     </div>
